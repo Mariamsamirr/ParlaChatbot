@@ -1,0 +1,41 @@
+{% extends "index-base.html" %} {% block style %}
+<link rel="stylesheet" href="../static/css/home.css" />
+<link rel="stylesheet" href="../static/css/testyourself.css" />
+{% endblock %} {% block header %}
+<header class="container" id="top">
+    <div class="wrapper">
+        <div class="navbar">
+            <!--Logo-->
+            <div class="navbar__logo">
+                <img src="../static/images/ParlaLogo.png" alt="Parla Logo" />
+                <a href="{{url_for('home')}}"><p>Parla-Chatbot</p></a>
+            </div>
+            <!--Links-->
+            <ul class="navbar__links">
+                <li class="navbar__link"><a href="#banner">Articles</a></li>
+                <li class="navbar__link">
+                    <a href="{{url_for('account')}}">Profile</a>
+                </li>
+                <li class="navbar__link"><a href="{{url_for('logout')}}">Logout</a></li>
+            </ul>
+            <!--Icon-->
+            <div class="navbar__ham">
+                <div class="navbar__icon"></div>
+            </div>
+        </div>
+    </div>
+    <div class="circle"></div>
+</header>
+{% endblock %} {% block content %}
+
+<div class="container2">
+    <div class="banner__desc">
+        <img src="../static/images/ParloQA.png" alt="Parlo Hello" class="banner_img" />
+        <div id="home" class="flex-center flex-column">
+            <h1>Test Your Mental Health Status</h1>
+            <a class="btn" href="{{url_for('test_Q')}}">Start New Test</a>
+            <a class="btn" href="/highscores.html">Previous Tests</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
